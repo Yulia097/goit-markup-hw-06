@@ -814,12 +814,14 @@ footer {
   background: var(--primary-white-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-comment {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
   color: var(--paragraph-color);
+  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-comment textarea {
@@ -939,7 +941,8 @@ input[type='checkbox'] {
   color: #ffffff;
 }
 .subscribe-section input {
-  box-sizing: border-box;
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+  border: none;
 
   width: 358px;
   height: 50px;
@@ -950,7 +953,13 @@ input[type='checkbox'] {
   border-radius: 4px;
   margin-right: 12px;
   background-color: var(--secondary-background-color);
+  transition: outline-color var(--accent-color);
 }
+.subscribe-section input:focus-visible {
+  outline-color: var(--accent-color);
+  border: var(--secondary-background-color);
+}
+
 .subscribe-button {
   padding-left: 16px;
   display: flex;
